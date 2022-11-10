@@ -7,8 +7,8 @@
 // The trait AppendBar has only one function,
 // which appends "Bar" to any object
 // implementing this trait.
+// Execute `rustlings hint traits1` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 trait AppendBar {
     fn append_bar(self) -> Self;
@@ -16,6 +16,10 @@ trait AppendBar {
 
 impl AppendBar for String {
     //Add your code here
+    fn append_bar(mut self) -> Self{
+        self.push_str("Bar");
+        self
+    }
 }
 
 fn main() {
